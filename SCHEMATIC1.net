@@ -1,0 +1,64 @@
+* source CAD
+R_R1         N00072 VCC R_R1 10k TC=0,0 
+.model        R_R1 RES R=1 DEV=5% TC1=0 TC2=0
+R_R2         N02773 N00072 R_R2 2k TC=0,0 
+.model        R_R2 RES R=1 DEV=5% TC1=0 TC2=0
+R_R13         N00783 N01366 R_R13 600 TC=0,0 
+.model        R_R13 RES R=1 DEV=5% TC1=0 TC2=0
+R_R14         N00789 N01508 R_R14 600 TC=0,0 
+.model        R_R14 RES R=1 DEV=5% TC1=0 TC2=0
+R_R15         N00802 N01504 R_R15 600 TC=0,0 
+.model        R_R15 RES R=1 DEV=5% TC1=0 TC2=0
+R_R16         N00806 N01575 R_R16 600 TC=0,0 
+.model        R_R16 RES R=1 DEV=5% TC1=0 TC2=0
+R_R17         N00810 N01579 R_R17 600 TC=0,0 
+.model        R_R17 RES R=1 DEV=5% TC1=0 TC2=0
+R_R3         N00943 VCC R_R3 10k TC=0,0 
+.model        R_R3 RES R=1 DEV=5% TC1=0 TC2=0
+R_R4         0 N00943 R_R4 910 TC=0,0 
+.model        R_R4 RES R=1 DEV=5% TC1=0 TC2=0
+R_R6         0 N01108 R_R6 1.6k TC=0,0 
+.model        R_R6 RES R=1 DEV=5% TC1=0 TC2=0
+R_R8         0 N03733 R_R8 4.3k TC=0,0 
+.model        R_R8 RES R=1 DEV=5% TC1=0 TC2=0
+R_R10         0 N01162 R_R10 11k TC=0,0 
+.model        R_R10 RES R=1 DEV=5% TC1=0 TC2=0
+R_R12         0 N16731 R_R12 20k TC=0,0 
+.model        R_R12 RES R=1 DEV=5% TC1=0 TC2=0
+V_V1         VCC 0 12
+V_V2         -VCC 0 -12
+X_Rs         0 0 N02773 POT PARAMS: SET={ALFA} VALUE=18k
+R_R5         N01108 VCC R_R5 10k TC=0,0 
+.model        R_R5 RES R=1 DEV=5% TC1=0 TC2=0
+R_R7         VCC N03733 R_R7 10k TC=0,0 
+.model        R_R7 RES R=1 DEV=5% TC1=0 TC2=0
+R_R11         N16731 VCC R_R11 10k TC=0,0 
+.model        R_R11 RES R=1 DEV=5% TC1=0 TC2=0
+R_R9         VCC N01162 R_R9 10k TC=0,0 
+.model        R_R9 RES R=1 DEV=5% TC1=0 TC2=0
+D_D1          N01366 0 led_rosu 
+D_D2          N01508 0 green_led 
+D_D3          N01504 0 orange 
+D_D4          N01575 0 blue 
+D_D5          N01579 0 yellow 
+R_R18         N09295 N10536 R_R18 1k TC=0,0 
+.model        R_R18 RES R=1 DEV=5% TC1=0 TC2=0
+R_R21         0 N09295 R_R21 1.5k TC=0,0 
+.model        R_R21 RES R=1 DEV=5% TC1=0 TC2=0
+R_R22         VREF 0 R_R22 2k TC=0,0 
+.model        R_R22 RES R=1 DEV=5% TC1=0 TC2=0
+R_R23         VCC VREF R_R23 10k TC=0,0 
+.model        R_R23 RES R=1 DEV=5% TC1=0 TC2=0
+X_U3A         N00072 N10536 VCC -VCC N10536 TL084/301/TI
+X_U3B         N09295 N14001 VCC -VCC OUT TL084/301/TI
+R_R24         VREF N14001 R_R24 1k TC=0,0 
+.model        R_R24 RES R=1 DEV=5% TC1=0 TC2=0
+R_R25         OUT N14001 R_R25 1.5k TC=0,0 
+.model        R_R25 RES R=1 DEV=5% TC1=0 TC2=0
+V_V3         VREF 0 1.3
+X_U4A         N00352 N00943 VCC -VCC N00783 TL084
+X_U4B         N00352 N16731 VCC -VCC N00810 TL084
+X_U4C         N00352 N01162 VCC VCC N00806 TL084
+X_U4D         N00352 N03733 VCC -VCC N00802 TL084
+X_U5A         N00352 N01108 VCC -VCC N00789 TL084
+.PARAM  alfa=0.5
